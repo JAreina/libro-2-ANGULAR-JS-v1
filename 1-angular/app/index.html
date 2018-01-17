@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es" ng-app="jareina">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="js/lib/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/aparcamientoCrtl.js"></script>
+
+  <title>JAreina</title>
+</head>
+
+<body>
+
+<div ng-controller="aparcamientoC">
+  <table>
+    <thead>
+      <tr>
+        <th>Plate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Iterating over the cars -->
+      <tr ng-repeat="car in cars">
+        <!-- Showing the car's plate -->
+        <td>{{car.plate}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <label >AÑADE MÁS</label>
+  <input type="text" ng-model="car.plate"/>
+
+  <button ng-click="park(car)">NUEVO</button>
+</div>
+
+
+</body>
+
+</html>

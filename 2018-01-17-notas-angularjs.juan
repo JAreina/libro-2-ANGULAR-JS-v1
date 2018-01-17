@@ -1,2 +1,19 @@
 libro 2 ANGULAR JS
 
+arquitectura
+MODEL-VIEW-WHATEVER
+-----------------------------------
+
+- VIEW : ESCRITO EN HTML , USA DIRECTIVAS , UNA FORMA DE EXTENDER EL HTMLE
+- CONTROLLER : LOGICA DE NEGOCIO USADA POR LA VISTA
+- objeto scope: la conexión entre vista y CONTROLLER
+- model : objetos javascript planos POJO
+
+
+   atributo : ng-app en etiqueta html de la vista
+  nombr del modulo  de la app :        ng-app="nombreApp"
+
+
+
+
+            ****************************************
