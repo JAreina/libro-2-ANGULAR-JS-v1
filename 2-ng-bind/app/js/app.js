@@ -1,3 +1,3 @@
 "use strict";
 
- var app = angular.module('jareina',  ['jareina.aparcamiento']);
+ var app = angular.module('jareina',  ['ngSanitize','jareina.aparcamiento']);

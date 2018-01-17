@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="js/lib/angular.js"></script>
+<script src="js/lib/angular-sanitize.js"></script>
 <script src="js/app.js"></script>
 <script src="js/controllers/aparcamientoCrtl.js"></script>
 
@@ -16,6 +17,7 @@
 
 <div ng-controller="aparcamientoC">
 <h1 ng-bind="titulo"></h1>
+<h1 ng-bind-html="titulo2 | linky"></h1>
 </div>
 
 
