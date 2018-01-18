@@ -22,7 +22,7 @@ ngBlur, ngChange,
 ngCopy, ngCut, ngDblClick, ngFocus, ngKeyPress, ngKeyDown, ngKeyUp, ngMousedown,
 ngMouseenter, ngMouseleave, ngMousemove, ngMouseover, ngMouseup, ngPaste
 
-
+----------------------------------------------------
 
      -ng-disabled
      <button
@@ -31,3 +31,26 @@ ngMouseenter, ngMouseleave, ngMousemove, ngMouseover, ngMouseup, ngPaste
      >
      Park
      </button>
+
+----------------------------------------------------
+
+     ng-show ---ng-hide
+
+
+     <div ng-hide="cars.length > 0">
+The parking lot is empty
+</div>
+
+
+
+--------------------------------------------
+   ng-include
+
+
+   <div ng-include="'menu.html'"></div>
+
+
+
+   ---------------------------------------------
+
+   

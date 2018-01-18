@@ -35,7 +35,7 @@ background-color: #f0f05b;
         <!-- Showing the car's plate -->
         <td><input type="checkbox" ng-model="car.selected"/></td>
         <td>{{car.plate}}</td>
-        <td><span ng-bind="car.color"></span></td>
+        <td><span ng-bind="car.color" ng-style="{color: car.color}"></span></td>
 <td><span ng-bind="car.entrance"></span></td
       </tr>
 
