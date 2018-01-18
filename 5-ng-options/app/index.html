@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es" ng-app="jareina">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="js/lib/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/aparcamientoCrtl.js"></script>
+
+  <title>JAreina</title>
+  <style>
+.selected {
+background-color: #f0f05b;
+}
+</style>
+</head>
+
+<body>
+
+<div ng-controller="aparcamientoC">
+  <table>
+    <thead>
+      <tr>
+        <th>--</th>
+        <th>Plate</th>
+        <th>Color</th>
+<th>Entrance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Iterating over the cars -->
+      <tr ng-repeat="car in cars" ng-class="{selected: car.selected}">
+        <!-- Showing the car's plate -->
+        <td><input type="checkbox" ng-model="car.selected"/></td>
+        <td>{{car.plate}}</td>
+        <td><span ng-bind="car.color"></span></td>
+<td><span ng-bind="car.entrance"></span></td
+      </tr>
+
+    </tbody>
+  </table>
+  <label >AÑADE MÁS</label>
+  <input type="text" ng-model="car.plate"/>
+  <select
+  ng-model="car.color"
+  ng-options="color for color in colors"
+  >
+  Pick a color
+  </select>
+  <button ng-click="park(car)">NUEVO</button>
+  <button
+ng-click="park(car)"
+ng-disabled="!car.plate || !car.color""
+>
+ng-disabled
+</button>
+</div>
+
+
+</body>
+
+</html>
