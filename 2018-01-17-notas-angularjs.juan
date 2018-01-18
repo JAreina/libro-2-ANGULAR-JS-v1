@@ -17,3 +17,17 @@ MODEL-VIEW-WHATEVER
 
 
             ****************************************
+DIRECTIVAS DE EVENTOS
+ngBlur, ngChange,
+ngCopy, ngCut, ngDblClick, ngFocus, ngKeyPress, ngKeyDown, ngKeyUp, ngMousedown,
+ngMouseenter, ngMouseleave, ngMousemove, ngMouseover, ngMouseup, ngPaste
+
+
+
+     -ng-disabled
+     <button
+     ng-click="park(car)"
+     ng-disabled="!car.plate"
+     >
+     Park
+     </button>
