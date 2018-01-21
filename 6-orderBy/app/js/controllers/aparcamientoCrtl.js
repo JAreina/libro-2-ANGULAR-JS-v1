@@ -4,7 +4,11 @@
 var c=angular.module('jareina.aparcamiento',[]);
 
 
-c.controller('aparcamientoC', ['$scope', function($scope) {
+c.controller('aparcamientoC', ['$scope','$filter', function($scope,$filter) {
+
+
+  $scope.appTitle = $filter("uppercase")("JAreina");
+
 $scope.colors = ["White", "Black", "Blue", "Red", "Silver"];
 $scope.otro="";
   $scope.cars = [{
