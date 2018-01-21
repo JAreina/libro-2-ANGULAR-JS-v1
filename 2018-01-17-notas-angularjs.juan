@@ -53,4 +53,12 @@ The parking lot is empty
 
    ---------------------------------------------
 
-   
+   CREAR DIRECTIVAS PROPIAS
+
+   ---------------------------------------------
+
+Registrar directiva nueva en el módulo
+parking.directive("directiveName", function () {
+return {
+};
+});
