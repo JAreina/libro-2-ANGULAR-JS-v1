@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es" ng-app="jareina" ng-controller="aparcamientoC">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="js/lib/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/aparcamientoCrtl.js"></script>
+
+  <title>{{appTitle}}</title>
+  <style>
+    .selected {
+      background-color: #f0f05b;
+    }
+  </style>
+</head>
+
+<body >
+<h1 ng-bind="appTitle | lowercase"></h1>
+  <div >
+    <input type="text" ng-model="criteria" placeholder="BUSCAR" />
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            <a href="" ng-click="field = 'plate'; order=!order">
+  Plate
+  </a>
+          </th>
+          <th>
+            <a href="" ng-click="field = 'color'; order=!order">
+  Color
+  </a>
+          </th>
+          <th>
+            <a href="" ng-click="field = 'entrance'; order=!order">
+  Entrance
+  </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-class="{selected: car.selected}" ng-repeat="car in cars | filter:criteria | orderBy:field:order">
+          <td>
+            <input type="checkbox" ng-model="car.selected" />
+          </td>
+          <td>{{car.plate | plate}}</td>
+          <td>{{car.color}}</td>
+          <td>{{car.entrance | date:'dd/MM/yyyy hh:mm'}}</td>
+        </tr>
+      </tbody>
+    </table <label>AÑADE MÁS</label>
+    <input type="text" ng-model="car.plate" />
+    <select ng-model="car.color" ng-options="color for color in colors">
+  Pick a color
+  </select>
+    <button ng-click="park(car)">NUEVO</button>
+    <button ng-click="park(car)" ng-disabled="!car.plate || !car.color" "
+>
+ng-disabled
+</button>
+</div>
+
+
+</body>
+
+</html>
